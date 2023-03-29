@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="500px" height="500px">
+        <!-- It's  frame for colour full text in this box I implemented rainbow colour full text. I implemented rainbow colour and text by the below mention javascript-->
+    </canvas>
+    
+    <!--It's a javascript based I implemented rainbow colourfull text by this script -->
+    <script>
+        var c = document.getElementById("mycanvas");
+        var ctx = c.getContext("2d");
+    ctx.font = "30px georgia";
+    var gradient = ctx.createLinearGradient(0,0, c.width, 0);
+    gradient.addColorStop("0", "magenta");
+    gradient.addColorStop("0.5", "blue");
+    gradient.addColorStop("1.0", "red");
+    ctx.strokeStyle = gradient;
+    ctx.strokeText("Hello World! 😊", 10, 100);
+  </script>
+</body>
+</html>
